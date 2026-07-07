@@ -1,0 +1,71 @@
+name: Feature request
+description: Suggest a new capability or an improvement to an existing one.
+title: "[Feature] "
+labels: ["enhancement", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping shape MacWinlink.  Please describe the problem you're trying to solve — not just the solution you have in mind — so the request can be evaluated against other similar asks.
+
+        **Before filing**, please check the [open issues list](../../issues) for a similar request already open.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem are you trying to solve?
+      description: |
+        Describe the workflow, use case, or pain point that motivates this request.  What are you currently doing (or unable to do) that this would improve?
+
+        For example:  *"When I connect to a VARA HF gateway that's off-air, the retry loop takes 60 seconds before I get a clear error.  I'd like to know sooner that the gateway isn't responding."*
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposed
+    attributes:
+      label: Proposed solution
+      description: |
+        What would you like MacWinlink to do?  A rough description is fine — you don't need to design the feature in detail.
+
+        For example:  *"After 20 seconds of retries with no response from the gateway, show a `Gateway not responding — keep waiting? Cancel?` dialog in the session window."*
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: Have you tried existing workarounds?  Are there other approaches that could solve the same problem?
+    validations:
+      required: false
+
+  - type: dropdown
+    id: transport
+    attributes:
+      label: Related transport / area
+      description: Does this feature relate to a specific transport or area?
+      options:
+        - Not specific to one area
+        - Telnet
+        - VARA HF
+        - VARA FM
+        - ARDOP
+        - Packet
+        - Radio / rig control
+        - Message composition / inbox
+        - Gateway browser / selection
+        - Settings / configuration
+        - Session window UI
+        - Helper app
+        - Other
+    validations:
+      required: false
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Additional context
+      description: Any related links, mockups, or references (e.g. how Winlink Express handles the same thing).
+    validations:
+      required: false

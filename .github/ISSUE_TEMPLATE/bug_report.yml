@@ -1,0 +1,114 @@
+name: Bug report
+description: Report a defect in a MacWinlink beta build.
+title: "[Bug] "
+labels: ["bug", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report a bug.  Please fill out as much of this as you can — the more precise the reproduction steps, the faster the fix.
+
+        **Before filing**, please check whether the issue is already reported in the [open issues list](../../issues).
+
+  - type: input
+    id: macos-version
+    attributes:
+      label: macOS version
+      description: "e.g. macOS 15.5 (Sequoia).  Apple menu → About This Mac."
+      placeholder: "macOS 15.5 (Sequoia)"
+    validations:
+      required: true
+
+  - type: input
+    id: mac-hardware
+    attributes:
+      label: Mac hardware
+      description: "e.g. MacBook Air M2, Mac mini M4 Pro.  Apple menu → About This Mac."
+      placeholder: "MacBook Air M2 (2022)"
+    validations:
+      required: true
+
+  - type: input
+    id: macwinlink-version
+    attributes:
+      label: MacWinlink version
+      description: "Shown in the About window (MacWinlink menu → About MacWinlink) or on the release name (e.g. `1.0.0-beta19`)."
+      placeholder: "1.0.0-beta19"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: transport
+    attributes:
+      label: Transport / mode
+      description: Which transport (if any) is involved in the bug?
+      options:
+        - Not transport-related
+        - Telnet
+        - VARA HF
+        - VARA FM
+        - ARDOP
+        - Packet (AGW)
+        - Packet (KISS)
+        - Packet (Kenwood TNC)
+        - Other / multiple
+    validations:
+      required: true
+
+  - type: input
+    id: radio
+    attributes:
+      label: Radio / interface (RF bugs only)
+      description: "e.g. IC-7100, IC-7600, TH-D72.  If this is a Telnet-only or UI-only bug, leave blank."
+      placeholder: "IC-7100 via USB (SLAB_USBtoUART)"
+    validations:
+      required: false
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: A numbered list is best.  What did you click, connect to, or configure?
+      placeholder: |
+        1. Open Settings → Radios
+        2. Configure a new Icom radio
+        3. Click Test Connection
+        4. ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      description: What did you expect to happen?
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+      description: What actually happened?  Include any error messages verbatim.
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs, screenshots, or attachments
+      description: |
+        Session log excerpts, screenshots, or unified log output are enormously helpful.  Drag files into this box, or paste log text inside triple-backticks.
+
+        For unified log capture:  Terminal → `log show --predicate 'subsystem == "com.macwinlink.app"' --last 5m --style compact --info --debug > macwinlink.log`
+      placeholder: "Paste logs, drop screenshots, or leave blank."
+    validations:
+      required: false
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Additional notes
+      description: Anything else that seems relevant — related issues, workarounds you tried, band conditions, etc.
+    validations:
+      required: false

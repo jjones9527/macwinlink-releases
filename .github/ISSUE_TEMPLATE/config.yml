@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: MacWinlink source code (ARSFI)
+    url: https://github.com/ARSFI/MacWinlink
+    about: Source code, developer discussions, and full project history live in the ARSFI project repo.
