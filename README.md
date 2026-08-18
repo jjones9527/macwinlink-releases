@@ -4,6 +4,8 @@
 
 This repository is the **official public beta distribution point** for MacWinlink and the primary channel for tester feedback.  The full source code and planning discussions currently live in a private repository under the Amateur Radio Safety Foundation while the project completes its pre-Mac-App-Store readiness work; public source-code visibility is on the roadmap but not yet enabled.
 
+**File bugs and feature requests in [this repo's Issues tab](../../issues)** — regardless of any other MacWinlink URLs you may have seen in documentation or release notes.  Every report is read by the maintainer and triaged into the active development plan.
+
 ---
 
 ## Download
