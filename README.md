@@ -2,7 +2,7 @@
 
 **MacWinlink is a native macOS [Winlink](https://www.winlink.org/) email client for amateur radio operators.**  It brings the Winlink global radio email network to macOS as a first-class app, with native SwiftUI, direct CAT rig control, and support for Telnet, VARA HF, VARA FM, ARDOP, and Packet transports.
 
-This repository is the **official public beta distribution point** for MacWinlink.  The project's source code and issue tracking live under the parent organization at [github.com/ARSFI/MacWinlink](https://github.com/ARSFI/MacWinlink).
+This repository is the **official public beta distribution point** for MacWinlink and the primary channel for tester feedback.  The full source code and planning discussions currently live in a private repository under the Amateur Radio Safety Foundation while the project completes its pre-Mac-App-Store readiness work; public source-code visibility is on the roadmap but not yet enabled.
 
 ---
 
@@ -41,7 +41,7 @@ MacWinlink will now launch, and future launches of this same version will open n
 
 ### Is this safe?
 
-Yes — for this specific app.  MacWinlink is built from source in the ARSFI project and signed ad-hoc during release packaging.  The Gatekeeper warning is a general macOS protection against unidentified developers, not a specific warning about MacWinlink.  Once Apple Developer Program enrollment completes, future builds will be Developer-ID signed and notarized, and this manual step will no longer be needed.
+Yes — for this specific app.  MacWinlink is built from source by the ARSFI project and signed ad-hoc during release packaging.  The Gatekeeper warning is a general macOS protection against unidentified developers, not a specific warning about MacWinlink.  Once Apple Developer Program enrollment completes, future builds will be Developer-ID signed and notarized, and this manual step will no longer be needed.
 
 ---
 
@@ -56,7 +56,7 @@ Yes — for this specific app.  MacWinlink is built from source in the ARSFI pro
 
 ## Reporting Bugs and Requesting Features
 
-**This repository's [Issues tab](../../issues) is the intake point for all beta tester feedback.**
+**This repository's [Issues tab](../../issues) is the intake point for all beta tester feedback.**  Please file everything here — bugs, feature requests, and questions.
 
 - **Bug report** — use the **Bug report** issue template.  Include your macOS version, MacWinlink version, and steps to reproduce.  Screenshots and log excerpts are enormously helpful.
 - **Feature request** — use the **Feature request** issue template.  Describe the problem you're trying to solve and the outcome you'd like to see.
@@ -65,10 +65,9 @@ Yes — for this specific app.  MacWinlink is built from source in the ARSFI pro
 
 1. You file an issue here.
 2. The maintainer triages and reviews it.  You may be asked for clarifying details or additional logs.
-3. Confirmed bugs and accepted feature requests get filed upstream into the main ARSFI project repo at [ARSFI/MacWinlink](https://github.com/ARSFI/MacWinlink), where the actual code changes happen.
-4. You'll be notified in the original issue when a fix or feature ships in a subsequent beta.
+3. Confirmed bugs and accepted feature requests are tracked internally against the codebase; you'll be notified in the original issue when a fix or feature ships in a subsequent beta.
 
-Filing here (rather than directly in ARSFI/MacWinlink) keeps the public beta feedback organized in one place and lets the maintainer prioritize what gets forwarded upstream.
+Filing here keeps the public beta feedback organized in one place and gives every tester visibility into what others have reported.
 
 ---
 
@@ -82,6 +81,6 @@ You can **watch this repo** (top-right → Watch → Custom → Releases) to get
 
 ## Project Home
 
-The MacWinlink source code, contributor discussions, and full development history live at **[ARSFI/MacWinlink](https://github.com/ARSFI/MacWinlink)**.  This repo (`jjones9527/macwinlink-releases`) exists solely to distribute public beta builds and collect tester feedback.
+This repo (`jjones9527/macwinlink-releases`) is the public face of MacWinlink for the ongoing beta cycle — it hosts the DMGs, the release notes, and the issue tracker.  Source code, architectural discussions, and long-form roadmap work live in a private planning repository until the project's public-visibility prep (audit sweep, license clean-up, credential scrub) completes.  Once opened, that repo will be linked here.
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) for details on what this repo is and isn't for.
